@@ -1,49 +1,102 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+	<title>Dezentrale Aufgabenlisten mit Git</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/moon.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/my.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-markdown>
+	# Dezentrale Aufgabenlisten mit Git
+</section>
+<section data-markdown>
+	<script type="text/template">
+	## Motivation
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	- Zur Selbstorganisation haben sich TODO-Listen bewährt
+	- Unterschiedliche Komplexität
+	    - einfache Papierlisten bis zu Kanban Boards
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	Note:
+		- Im Studium, bei der Promotion oder im täglichen Leben
+	</script>
+</section>
+
+<section data-markdown>
+	<script type="text/template">
+	## Kanban Board
+
+	- Ein Kanban-Board ist ein Werkzeug zur Umsetzung der Kanban-Entwicklungsmethode. ([W:Kanban-Tafel](https://de.wikipedia.org/wiki/Kanban-Tafel))
+
+	![Simples Kanban Board](img/Simple-kanban-board-.jpg) <!-- .element: style="width: 50%" -->
+
+	CC-BY-SA <!-- .element: style="font-size: .7em" --> [Jeff.lasovski](https://commons.wikimedia.org/w/index.php?title=User:Jeff.lasovski) ([Wikipedia](https://de.wikipedia.org/wiki/Datei:Simple-kanban-board-.jpg))
+
+	Note:
+		- Jeder Eintrag auf dem Board steht für eine Aufgabe, welche zwischen verschiedenen Abschnitten auf der Tafel bewegt werden kann.
+		- Die Abschnitte können z.B. anstehende Aufgaben, Aufgaben in Arbeit oder abgeschlossene Aufgaben repräsentieren.
+	</script>
+</section>
+
+<section data-markdown>
+	<script type="text/template">
+	## Aufgabe
+
+	- Entwicklung eines dezentrales Kanban Boards
+	- Nach Möglichkeit eine Browseranwendung
+	- Speicherung in einem dezentral verfügbaren Git-Repository
+	- Darstellung der Aufgaben in einem flexiblen RDF-Datenmodell
+	- Authentifizierung über OAuth (z.B. GitHub)
+	</script>
+</section>
+<section data-markdown>
+	<script type="text/template">
+	## Lernziele
+
+	- Bowseranwendungsentwicklung
+	- Versionierung mit Git
+	- OAuth2 Authenthication
+	- Prozessmodellierung
+	- Semantische Technologien (RDF, SPARQL, Linked Data)
+	</script>
+</section>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+	// More info about config & dependencies:
+	// - https://github.com/hakimel/reveal.js#configuration
+	// - https://github.com/hakimel/reveal.js#dependencies
+	Reveal.initialize({
+		dependencies: [
+			{ src: 'plugin/markdown/marked.js' },
+			{ src: 'plugin/markdown/markdown.js' },
+			{ src: 'plugin/notes/notes.js', async: true },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+		]
+	});
+</script>
+</body>
 </html>
